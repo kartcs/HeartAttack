@@ -1,0 +1,22 @@
+{
+	"geode": "2.0.0-beta.20",
+	"gd": "2.204",
+	"version": "v1.0.0",
+	"id": "kart.cs.heartattack",
+	"name": "Heart Attack",
+	"developer": "kart.cs",
+	"description": "Gives the player a chance to die of a heart attack.",
+	"settings": {
+		"hac":{
+			"name": "Heart attack chance",
+			"description": "The chance (out of 100) that the player dies of a heart attack.",
+			"type": "int",
+			"default": 10,
+			"min": 0,
+			"max": 100,
+			"control": {
+				"input": true
+			}
+		}
+	}
+}
