@@ -1,39 +1,50 @@
 #include <Geode/Geode.hpp>
 #include <Geode/binding/PlayLayer.hpp>
 #include <Geode/binding/PlayerObject.hpp>
-#include <Geode/binding/GJGameLevel.hpp>
 
 using namespace geode::prelude;
 
-#include <Geode/modify/PlayerObject.hpp>
 #include <Geode/modify/PlayLayer.hpp>
-int randomNum = rand() % 3;
-int randomPercent = rand() % 99;
+
+int randomNum = rand() % 100;
+float randomPercent = rand() % 90;
 float currentPercent;
-class $modify(ShuffleTheStuff, PlayerObject) {
-	void playerDestroyed(bool p0)
-	{
-		PlayerObject::playerDestroyed(p0);
-		randomNum = rand() % 100;
-		randomPercent = rand() % 100;
-	}
-};
+
+/* 
+	Keep in mind these notes are for my idiot self 
+	so don't expect anything too intelligent 
+*/
 class $modify(PlayLayer){
 	void updateProgressbar()
 	{
+		// CALL THE ORIGINAL :PAIN:
 		PlayLayer::updateProgressbar();
-		/* i think this stops it working in certain modes or smth */
+
+		// Gets the chance percentage setting
+		auto hac = Mod::get()->getSettingValue<int64_t>("hac");
+
+		// I think this stops it working in certain modes or something 
 		if (this == nullptr) return;
 		if (this->m_isPracticeMode) return;
 		if (this->m_isTestMode) return;
 
-		auto hac = Mod::get()->getSettingValue<int64_t>("hac");
-
+		// Sets the currentpercent float to the game's current percent
 		currentPercent = this->getCurrentPercent();
+
+		// This is essentially just "IF player != null"
 		if (m_player1)
 		{
-			if (randomNum <= hac &&  currentPercent >= randomPercent)
+			/* 
+				IF hac value is less or equal to randomnum 
+				&& percent is greater or equal THEN kill
+			*/
+			if (hac >= randomNum &&  currentPercent >= randomPercent)
 			{
+				// Randomizes the numbers for the next attempt
+				randomNum = rand() % 100;
+				randomPercent = rand() % 90;
+
+				// violence
 				this->PlayLayer::destroyPlayer(this->m_player1, nullptr);
 			}
 		}
