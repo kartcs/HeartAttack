@@ -9,7 +9,7 @@
 	"settings": {
 		"hac":{
 			"name": "Heart attack chance",
-			"description": "The chance (out of 100) that the player dies of a heart attack.",
+			"description": "The chance (out of 100) that the player dies of a heart attack. Setting this to 0 essentially disables the mod.",
 			"type": "int",
 			"default": 10,
 			"min": 0,
