@@ -1,3 +1,8 @@
+# v1.0.2
+
+ * Made the mod warn the user if left on
+ * Fixed perma UNdeath bug
+
 # v1.0.1
 
  * Fixed permadeath bug
