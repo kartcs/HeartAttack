@@ -1,7 +1,7 @@
 {
 	"geode": "2.0.0-beta.20",
 	"gd": "2.204",
-	"version": "v1.0.1",
+	"version": "v1.0.2",
 	"id": "kart.heartattack",
 	"name": "Heart Attack",
 	"developer": "kart.cs",
@@ -17,6 +17,12 @@
 			"control": {
 				"input": true
 			}
+		},
+		"enabled":{
+			"name": "Enable heart attacks",
+			"description": "Toggle ON to enable heart attacks.",
+			"type": "bool",
+			"default": true
 		}
 	}
 }
