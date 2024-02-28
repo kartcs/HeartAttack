@@ -1,7 +1,6 @@
 #include <Geode/binding/PlayLayer.hpp>
 #include <Geode/binding/MenuLayer.hpp>
-#include <Geode/Geode.hpp>
-#include <Geode/modify/Addresses.hpp>
+#include <Geode/Geode.hpp>
 #include <Geode/modify/PlayLayer.hpp>
 #include <Geode/modify/MenuLayer.hpp>
 
