@@ -1,6 +1,7 @@
 #include <Geode/binding/PlayLayer.hpp>
 #include <Geode/binding/MenuLayer.hpp>
-#include <Geode/Geode.hpp>
+#include <Geode/Geode.hpp>
+
 #include <Geode/modify/PlayLayer.hpp>
 #include <Geode/modify/MenuLayer.hpp>
 
@@ -77,7 +78,7 @@ class $modify(PlayLayer){
 					*/
 					if (HAC >= randomNum && currentPercent >= randomPercent)
 					{
-						// Locks the part so it run a billion times
+						// Locks the part so it DOESNT run a billion times
 						reset = true;
 
 						// violence
