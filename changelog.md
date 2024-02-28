@@ -1,5 +1,6 @@
 # v1.0.3
 
+ * Mod is now OFF by default
  * Now available on android
 
 # v1.0.2
