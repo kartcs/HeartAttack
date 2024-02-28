@@ -28,7 +28,7 @@
 			"name": "Enable heart attacks",
 			"description": "Toggle ON to enable heart attacks.",
 			"type": "bool",
-			"default": true
+			"default": false
 		}
 	}
 }
