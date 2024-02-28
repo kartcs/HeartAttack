@@ -7,5 +7,5 @@ This mod has a chance to just **kill you**. Out of nowhere.
 
 ## Credits
 
-**Everyone** who's talked in the [geode dev-help channel](https://discord.gg/9e43WMKzhp) for the last 2 days :lmfao:
+The [geode dev-help channel](https://discord.gg/9e43WMKzhp)
 thank you for dealing with my stupidity!!!!!
