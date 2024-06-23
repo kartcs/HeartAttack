@@ -1,3 +1,8 @@
+# v1.0.4
+
+ * Updated to work with 2.206
+ * A few other minor tweaks
+
 # v1.0.3
 
  * Mod is now OFF by default
