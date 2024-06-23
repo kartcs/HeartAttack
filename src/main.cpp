@@ -1,11 +1,12 @@
 #include <Geode/binding/PlayLayer.hpp>
 #include <Geode/binding/MenuLayer.hpp>
 #include <Geode/Geode.hpp>
+
+using namespace geode::prelude;
+
 #include <Geode/modify/Addresses.hpp>
 #include <Geode/modify/PlayLayer.hpp>
 #include <Geode/modify/MenuLayer.hpp>
-
-using namespace geode::prelude;
 
 int randomNum = rand() % 100;
 float randomPercent = rand() % 90;
