@@ -4,7 +4,6 @@
 
 using namespace geode::prelude;
 
-#include <Geode/modify/Addresses.hpp>
 #include <Geode/modify/PlayLayer.hpp>
 #include <Geode/modify/MenuLayer.hpp>
 
