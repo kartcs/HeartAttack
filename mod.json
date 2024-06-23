@@ -1,9 +1,9 @@
 {
-	"geode": "2.0.0-beta.23",
+	"geode": "3.0.3",
 	"gd": {
-		"win": "2.204",
-        	"android": "2.205"
-    	},
+		"win": "2.206",
+        "android": "2.206"
+    },
 	"version": "v1.0.4",
 	"id": "kart.heartattack",
 	"name": "Heart Attack",
@@ -28,7 +28,7 @@
 			"name": "Enable heart attacks",
 			"description": "Toggle ON to enable heart attacks.",
 			"type": "bool",
-			"default": false
+			"default": true
 		}
 	}
 }
