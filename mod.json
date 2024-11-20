@@ -2,7 +2,7 @@
 	"geode": "4.0.0",
 	"gd": {
 		"win": "2.207",
-        	"android": "2.207"
+		"android": "2.207"
     },
 	"version": "v1.0.5",
 	"id": "kart.heartattack",
