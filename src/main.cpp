@@ -1,20 +1,16 @@
 #include <Geode/binding/PlayLayer.hpp>
 #include <Geode/binding/MenuLayer.hpp>
-#include <Geode/Geode.hpp>
 
-using namespace geode::prelude;
+#include <Geode/Geode.hpp>
 
 #include <Geode/modify/PlayLayer.hpp>
 #include <Geode/modify/MenuLayer.hpp>
 
+using namespace geode::prelude;
+
 int randomNum = rand() % 100;
 float randomPercent = rand() % 90;
 float currentPercent;
-
-/* 
-	Keep in mind these notes are for my idiot self 
-	so don't expect anything too intelligent 
-*/
 
 bool warned = false;
 class $modify(MenuLayer) {
@@ -57,10 +53,6 @@ class $modify(PlayLayer){
 			{
 				if (m_player1)
 				{
-					/* 
-						IF hac value is less or equal to randomnum 
-						&& percent is greater or equal THEN kill
-					*/
 					if (HAC >= randomNum && currentPercent >= randomPercent)
 					{
 						reset = true;
