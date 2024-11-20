@@ -1,3 +1,8 @@
+# v1.0.5
+
+  * Updated to work with Geode v4.0.0
+  * Updated to work with 2.207
+
 # v1.0.4
 
  * Updated to work with 2.206
