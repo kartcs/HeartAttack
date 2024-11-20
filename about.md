@@ -1,7 +1,7 @@
 # Heart Attack
 ### This was a horrible idea.
 
-Humans die of old age, so why can't Geometry Dash icons?
+Humans can have heart failure, so why shouldn't icons have it too?
 
 This mod has a chance to just **kill you**. Out of nowhere.
 
