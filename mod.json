@@ -1,8 +1,8 @@
 {
 	"geode": "4.3.0",
 	"gd": {
-		"win": "2.207",
-		"android": "2.207"
+		"win": "2.2074",
+		"android": "2.2074"
     },
 	"version": "v1.0.5",
 	"id": "kart.heartattack",
