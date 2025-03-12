@@ -2,6 +2,7 @@
 
   * Updated to work with Geode v4.3.0
   * Updated to work with 2.2074
+  * Added joke tag
 
 # v1.0.4
 
