@@ -1,12 +1,17 @@
+# v1.0.6
+
+  * Updated for Geode v4.5.0
+  * Added MacOS support (thanks jasmine!!)
+
 # v1.0.5
 
-  * Updated to work with Geode v4.3.0
-  * Updated to work with 2.2074
+  * Updated for Geode v4.3.0
+  * Updated for version 2.2074
   * Added joke tag
 
 # v1.0.4
 
- * Updated to work with 2.206
+ * Updated for version 2.206
  * A few other minor tweaks
 
 # v1.0.3
