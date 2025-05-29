@@ -1,7 +1,7 @@
 # v1.0.6
 
   * Updated for Geode v4.5.0
-  * Added MacOS support (thanks jasmine!!)
+  * Added MacOS & iOS support (thanks jasmine!!)
 
 # v1.0.5
 
