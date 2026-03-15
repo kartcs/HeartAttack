@@ -1,15 +1,15 @@
 {
-	"geode": "4.5.0",
+	"geode": "5.1.0",
 	"gd": {
-		"win": "2.2074",
-		"android": "2.2074",
-		"mac": "2.2074",
-		"ios": "2.2074"
+		"win": "2.208",
+		"android": "2.208",
+		"mac": "2.208",
+		"ios": "2.208"
     },
-	"version": "v1.0.6",
+	"version": "v1.0.7",
 	"id": "kart.heartattack",
 	"name": "Heart Attack",
-	"developer": "kart.cs",
+	"developer": "kart",
 	"description": "Random chance to die of a heart attack.",
 	"tags": [
 		"gameplay",
@@ -18,7 +18,7 @@
 	"settings": {
 		"hac":{
 			"name": "Heart attack chance",
-			"description": "The chance (out of 100) that the player dies of a heart attack. Setting this to 0 essentially disables the mod.",
+			"description": "The percentage chance that the player dies of a heart attack. Setting this to 0 essentially disables the mod.",
 			"type": "int",
 			"default": 10,
 			"min": 0,
