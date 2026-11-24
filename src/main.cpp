@@ -87,7 +87,7 @@ class $modify(PlayLayer){
 						reset = true;
 						this->PlayLayer::destroyPlayer(this->m_player1, nullptr);
 						// ignore this i just HAVE to know what this does lmfao
-						PlayLayer::spawnFirework()
+						PlayLayer::spawnFirework();
 					}
 				}
 			}
