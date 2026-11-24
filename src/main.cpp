@@ -10,6 +10,7 @@ using namespace geode::prelude;
 
 bool enabled = Mod::get()->getSettingValue<bool>("enabled");
 int randomNum;
+float randomPercent;
 float currentPercent;
 float chance
 float low;
@@ -18,7 +19,6 @@ float high;
 void getNewValues() {
 	enabled = Mod::get()->getSettingValue<bool>("enabled")
 	randomNum = rand() % 100;
-	randomPercent = rand() % abs();
 	low = Mod::get()->getSettingValue<float>("lowrange");
 	high = Mod::get()->getSettingValue<float>("highrange");
 	chance = Mod::get()->getSettingValue<int64_t>("hac");
@@ -30,6 +30,8 @@ void getNewValues() {
 		high = low;
 		low = t;
 	}
+
+	randomPercent = rand() % abs(low - high);
 }
 
 bool warned = false;
