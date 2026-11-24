@@ -1,3 +1,8 @@
+# v1.0.8
+
+  * Updated for Geode v6.0.0
+  * Updated for Geometry Dash v2.2091
+
 # v1.0.7
 
   * Updated for Geode v5.10.1
