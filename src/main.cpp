@@ -12,12 +12,12 @@ bool enabled = Mod::get()->getSettingValue<bool>("enabled");
 int randomNum;
 float randomPercent;
 float currentPercent;
-float chance
+float chance;
 float low;
 float high;
 
 void getNewValues() {
-	enabled = Mod::get()->getSettingValue<bool>("enabled")
+	enabled = Mod::get()->getSettingValue<bool>("enabled");
 	randomNum = rand() % 100;
 	low = Mod::get()->getSettingValue<float>("lowrange");
 	high = Mod::get()->getSettingValue<float>("highrange");
@@ -31,7 +31,7 @@ void getNewValues() {
 		low = t;
 	}
 
-	randomPercent = rand() % abs(low - high);
+	randomPercent = rand() * (high - low) + low;
 }
 
 bool warned = false;
@@ -75,7 +75,7 @@ class $modify(PlayLayer){
 			{
 				if (m_player1)
 				{
-					if (HAC >= randomNum && currentPercent >= randomPercent && currentPercent => low && currentPercent <= high)
+					if (chance >= randomNum && currentPercent >= randomPercent && currentPercent >= low && currentPercent <= high)
 					{
 						reset = true;
 						this->PlayLayer::destroyPlayer(this->m_player1, nullptr);
