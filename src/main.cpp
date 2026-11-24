@@ -26,9 +26,9 @@ void getNewValues() {
 	if (high < low)
 	{
 		// flip in case the player is a MORONNNN
-		float t = high
-		high = low
-		low = t
+		float t = high;
+		high = low;
+		low = t;
 	}
 }
 
