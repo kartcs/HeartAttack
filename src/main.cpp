@@ -2,6 +2,7 @@
 #include <Geode/binding/MenuLayer.hpp>
 
 #include <Geode/Geode.hpp>
+#include <Geode/loader/Log.hpp>
 
 #include <Geode/modify/PlayLayer.hpp>
 #include <Geode/modify/MenuLayer.hpp>
@@ -32,11 +33,11 @@ void getNewValues() {
 	}
 
 	randomPercent = rand() * (high - low) + low;
-	geode::log::debug("REFRESHED VALUES: chance, low, high, rp");
-	geode::log::debug(chance);
-	geode::log::debug(low);
-	geode::log::debug(high);
-	geode::log::debug(randomPercent);
+	geode::log::info("REFRESHED VALUES: chance, low, high, rp");
+	geode::log::info(chance);
+	geode::log::info(low);
+	geode::log::info(high);
+	geode::log::info(randomPercent);
 }
 
 bool warned = false;
@@ -82,7 +83,7 @@ class $modify(PlayLayer){
 				{
 					if (chance >= randomNum && currentPercent >= randomPercent && currentPercent >= low && currentPercent <= high)
 					{
-						geode::log::debug("w speed");
+						geode::log::info("w speed");
 						reset = true;
 						this->PlayLayer::destroyPlayer(this->m_player1, nullptr);
 						// ignore this i just HAVE to know what this does lmfao
