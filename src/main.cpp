@@ -33,10 +33,10 @@ void getNewValues() {
 
 	randomPercent = rand() * (high - low) + low;
 	geode::log::error("REFRESHED VALUES: chance, low, high, rp");
-	geode::log::error(to_string(chance));
-	geode::log::error(to_string(low));
-	geode::log::error(to_string(high));
-	geode::log::error(to_string(randomPercent));
+	geode::log::error(chance);
+	geode::log::error(low);
+	geode::log::error(high);
+	geode::log::error(randomPercent);
 }
 
 bool warned = false;
