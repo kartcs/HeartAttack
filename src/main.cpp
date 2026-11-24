@@ -32,11 +32,11 @@ void getNewValues() {
 	}
 
 	randomPercent = rand() * (high - low) + low;
-	geode::log::error("REFRESHED VALUES: chance, low, high, rp");
-	geode::log::error(chance);
-	geode::log::error(low);
-	geode::log::error(high);
-	geode::log::error(randomPercent);
+	geode::log::debug("REFRESHED VALUES: chance, low, high, rp");
+	geode::log::debug(chance);
+	geode::log::debug(low);
+	geode::log::debug(high);
+	geode::log::debug(randomPercent);
 }
 
 bool warned = false;
@@ -82,7 +82,7 @@ class $modify(PlayLayer){
 				{
 					if (chance >= randomNum && currentPercent >= randomPercent && currentPercent >= low && currentPercent <= high)
 					{
-						geode::log::error("w speed");
+						geode::log::debug("w speed");
 						reset = true;
 						this->PlayLayer::destroyPlayer(this->m_player1, nullptr);
 						// ignore this i just HAVE to know what this does lmfao
