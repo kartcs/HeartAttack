@@ -38,6 +38,7 @@ class $modify(MenuLayer) {
 		if (!MenuLayer::init()) {
 			return false;
 		}
+		getNewValues();
 		if (!warned)
 		{
 			if (enabled)
@@ -58,16 +59,6 @@ class $modify(MenuLayer) {
 
 bool reset = false;
 class $modify(PlayLayer){
-	void startGame()
-	{
-		PlayLayer::startGame();
-		getNewValues();
-	}
-	void startGameDelayed()
-	{
-		PlayLayer::startGameDelayed();
-		getNewValues();
-	}
 	void updateProgressbar()
 	{
 		PlayLayer::updateProgressbar();
