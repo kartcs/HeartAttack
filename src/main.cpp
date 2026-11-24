@@ -8,9 +8,29 @@
 
 using namespace geode::prelude;
 
-int randomNum = rand() % 100;
-float randomPercent = rand() % 90;
+bool enabled = Mod::get()->getSettingValue<bool>("enabled");
+int randomNum;
 float currentPercent;
+float chance
+float low;
+float high;
+
+void getNewValues() {
+	enabled = Mod::get()->getSettingValue<bool>("enabled")
+	randomNum = rand() % 100;
+	randomPercent = rand() % abs();
+	low = Mod::get()->getSettingValue<float>("lowrange");
+	high = Mod::get()->getSettingValue<float>("highrange");
+	chance = Mod::get()->getSettingValue<int64_t>("hac");
+
+	if (high < low)
+	{
+		// flip in case the player is a MORONNNN
+		float t = high
+		high = low
+		low = t
+	}
+}
 
 bool warned = false;
 class $modify(MenuLayer) {
@@ -20,7 +40,7 @@ class $modify(MenuLayer) {
 		}
 		if (!warned)
 		{
-			if (Mod::get()->getSettingValue<bool>("enabled") == true)
+			if (enabled)
 			{
 				warned = true;
 				auto warning = FLAlertLayer::create(
@@ -38,25 +58,36 @@ class $modify(MenuLayer) {
 
 bool reset = false;
 class $modify(PlayLayer){
+	void startGame()
+	{
+		PlayLayer::startGame();
+		getNewValues();
+	}
+	void startGameDelayed()
+	{
+		PlayLayer::startGameDelayed();
+		getNewValues();
+	}
 	void updateProgressbar()
 	{
 		PlayLayer::updateProgressbar();
-		auto HAC = Mod::get()->getSettingValue<int64_t>("hac");
 		if (this == nullptr) return;
 		if (this->m_isPracticeMode) return;
 		if (this->m_isTestMode) return;
 		currentPercent = this->getCurrentPercent();
 
-		if (Mod::get()->getSettingValue<bool>("enabled") == true)
+		if (enabled)
 		{
 			if (!reset)
 			{
 				if (m_player1)
 				{
-					if (HAC >= randomNum && currentPercent >= randomPercent)
+					if (HAC >= randomNum && currentPercent >= randomPercent && currentPercent => low && currentPercent <= high)
 					{
 						reset = true;
 						this->PlayLayer::destroyPlayer(this->m_player1, nullptr);
+						// ignore this i just HAVE to know what this does lmfao
+						PlayLayer::spawnFirework()
 					}
 				}
 			}
@@ -66,7 +97,12 @@ class $modify(PlayLayer){
 	{
 		PlayLayer::resetLevel();
 		reset = false;
-		randomNum = rand() % 100;
-		randomPercent = rand() % 90;
+		getNewValues();
+	}
+	void fullReset()
+	{
+		PlayLayer::fullReset();
+		reset = false;
+		getNewValues();
 	}
 };

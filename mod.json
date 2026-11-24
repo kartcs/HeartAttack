@@ -6,7 +6,7 @@
 		"mac": "2.2091",
 		"ios": "2.2091"
     },
-	"version": "v1.0.8",
+	"version": "v1.1.0",
 	"id": "kart.heartattack",
 	"name": "Heart Attack",
 	"developer": "kart",
@@ -16,6 +16,16 @@
 		"joke"
 	],
 	"settings": {
+		"enabled":{
+			"name": "Enable heart attacks",
+			"description": "Toggle ON to enable heart attacks.",
+			"type": "bool",
+			"default": true
+		},
+		"gameplaydiv": {
+			"type": "title",
+			"name": "Gameplay Settings"
+		},
 		"hac":{
 			"name": "Heart attack chance",
 			"description": "The percentage chance that the player dies of a heart attack. Setting this to 0 essentially disables the mod.",
@@ -24,14 +34,24 @@
 			"min": 0,
 			"max": 100,
 			"control": {
-				"input": true
+				"slider": true
 			}
 		},
-		"enabled":{
-			"name": "Enable heart attacks",
-			"description": "Toggle ON to enable heart attacks.",
-			"type": "bool",
-			"default": true
+		"lowrange":{
+			"name": "",
+			"description": "The low end of the range players can die within. Players will not die of a heart attack before this percentage.",
+			"type": "float",
+			"default": 5.0,
+			"min": 0.0,
+			"max": 100.0
+		},
+		"highrange":{
+			"name": "",
+			"description": "The high end of the range players can die within. Players will not die of a heart attack after this percentage.",
+			"type": "float",
+			"default": 95.0,
+			"min": 0.0,
+			"max": 100.0
 		}
 	}
 }
