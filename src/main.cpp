@@ -2,7 +2,7 @@
 #include <Geode/binding/MenuLayer.hpp>
 
 #include <Geode/Geode.hpp>
-#include <string>
+#include <Geode/utils/general.hpp>
 
 #include <Geode/modify/PlayLayer.hpp>
 #include <Geode/modify/MenuLayer.hpp>
@@ -34,10 +34,10 @@ void getNewValues() {
 
 	randomPercent = rand() * (high - low) + low;
 	log::error("REFRESHED VALUES: chance, low, high, rp");
-	log::error(to_string(chance));
-	log::error(to_string(low));
-	log::error(to_string(high));
-	log::error(to_string(randomPercent));
+	log::error(numToString(chance));
+	log::error(numToString(low));
+	log::error(numToString(high));
+	log::error(numToString(randomPercent));
 }
 
 bool warned = false;
