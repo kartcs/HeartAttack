@@ -2,6 +2,7 @@
 #include <Geode/binding/MenuLayer.hpp>
 
 #include <Geode/Geode.hpp>
+#include <Geode/utils/random.hpp>
 
 #include <Geode/modify/PlayLayer.hpp>
 #include <Geode/modify/MenuLayer.hpp>
@@ -31,7 +32,7 @@ static void getNewValues() {
 		low = t;
 	}
 
-	randomPercent = rand() * (high - low) + low;
+	randomPercent = utils::random::generate(low, high);
 	log::error("REFRESHED VALUES");
 	log::error("you will die HERE: {}", randomPercent);
 }
