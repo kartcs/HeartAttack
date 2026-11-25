@@ -16,7 +16,7 @@ float chance;
 float low;
 float high;
 
-void getNewValues() {
+static void getNewValues() {
 	enabled = Mod::get()->getSettingValue<bool>("enabled");
 	randomNum = rand() % 100;
 	low = Mod::get()->getSettingValue<float>("lowrange");
