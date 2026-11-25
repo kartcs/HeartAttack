@@ -32,10 +32,8 @@ static void getNewValues() {
 	}
 
 	randomPercent = rand() * (high - low) + low;
-
-	const float debug = randomPercent;
 	log::error("REFRESHED VALUES");
-	log::error("you will die HERE: " + fmt::to_string(debug));
+	log::error("you will die HERE: {}", randomPercent);
 }
 
 bool warned = false;
