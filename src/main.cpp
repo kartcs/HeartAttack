@@ -33,8 +33,6 @@ static void getNewValues() {
 	}
 
 	randomPercent = utils::random::generate(low, high);
-	log::error("REFRESHED VALUES");
-	log::error("you will die HERE: {}", randomPercent);
 }
 
 bool warned = false;
@@ -80,11 +78,8 @@ class $modify(PlayLayer){
 				{
 					if (chance >= randomNum && currentPercent >= randomPercent && currentPercent >= low && currentPercent <= high)
 					{
-						log::error("w speed");
 						reset = true;
 						this->PlayLayer::destroyPlayer(this->m_player1, nullptr);
-						// ignore this i just HAVE to know what this does lmfao
-						PlayLayer::spawnFirework();
 					}
 				}
 			}

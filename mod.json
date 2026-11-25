@@ -34,24 +34,38 @@
 			"min": 0,
 			"max": 100,
 			"control": {
-				"slider": true
+				"slider": true,
+				"input": true,
+				"slider-step": 1
 			}
 		},
 		"lowrange":{
 			"name": "Low Percentage Range",
 			"description": "The low end of the range players can die within. Players will not die of a heart attack before this percentage.",
 			"type": "float",
-			"default": 5.0,
-			"min": 0.0,
-			"max": 100.0
+			"default": 5,
+			"min": 0,
+			"max": 100,
+			"control": {
+				"slider": false,
+				"arrows": true,
+				"arrow-step": 0.1,
+				"input": true
+			}
 		},
 		"highrange":{
 			"name": "High Percentage Range",
 			"description": "The high end of the range players can die within. Players will not die of a heart attack after this percentage.",
 			"type": "float",
-			"default": 95.0,
-			"min": 0.0,
-			"max": 100.0
+			"default": 95,
+			"min": 0,
+			"max": 100,
+			"control": {
+				"slider": false,
+				"arrows": true,
+				"arrow-step": 0.1,
+				"input": true
+			}
 		}
 	}
 }
