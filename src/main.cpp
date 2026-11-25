@@ -33,7 +33,7 @@ void getNewValues() {
 
 	randomPercent = rand() * (high - low) + low;
 	log::error("REFRESHED VALUES: chance, low, high, rp");
-	auto rand = fmt::to_string(randomPercent)
+	auto rand = fmt::to_string(randomPercent);
 	log::error(rand);
 }
 
