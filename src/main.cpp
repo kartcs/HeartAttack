@@ -10,7 +10,7 @@ using namespace geode::prelude;
 
 bool enabled = Mod::get()->getSettingValue<bool>("enabled");
 int randomNum;
-float randomPercent;
+const float randomPercent;
 float currentPercent;
 float chance;
 float low;
@@ -33,8 +33,7 @@ void getNewValues() {
 
 	randomPercent = rand() * (high - low) + low;
 	log::error("REFRESHED VALUES: chance, low, high, rp");
-	constexpr auto rand = fmt::to_string(randomPercent);
-	log::error(rand);
+	log::error(fmt::to_string(randomPercent));
 }
 
 bool warned = false;
