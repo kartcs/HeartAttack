@@ -10,7 +10,7 @@ using namespace geode::prelude;
 
 bool enabled = Mod::get()->getSettingValue<bool>("enabled");
 int randomNum;
-const float randomPercent;
+constexpr float randomPercent;
 float currentPercent;
 float chance;
 float low;
